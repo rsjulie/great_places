@@ -3,12 +3,12 @@ import 'dart:io';
 class PlaceLocation {
   double latitud;
   double longitud;
-  final String? address;
+  final String address;
 
   PlaceLocation({
     required this.latitud,
     required this.longitud,
-    this.address,
+    this.address = '',
   });
 }
 
