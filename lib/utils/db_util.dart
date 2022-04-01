@@ -1,3 +1,4 @@
+import 'package:great_places/utils/constants.dart';
 import 'package:sqflite/sqflite.dart' as sql;
 import 'package:path/path.dart' as path;
 
@@ -8,7 +9,7 @@ class DbUtil {
       path.join(dbPath, 'places.db'),
       onCreate: (db, version) {
         return db.execute(
-            'CREATE TABLE places (id TEXT PRIMARY KEY, title TEXT, image TEXT)');
+            'CREATE TABLE ${Constants.TABLE_NAME} (id TEXT PRIMARY KEY, title TEXT, image TEXT, latitude REAL, longitude REAL, address TEXT)');
       },
       version: 1,
     );
